@@ -1,0 +1,117 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 10px 0;
+    text-align: left;
+    margin-left: 20px
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease-in-out;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* レスポンシブなグリッド */
+    gap: 15px;
+    padding: 20px;
+    background-color: #fff;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 150px; /* サムネイルの高さを固定 */
+    object-fit: cover; /* アスペクト比を維持しつつ画像をコンテナに収める */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* --- ポップアップ関連のスタイル --- */
+.popup-overlay {
+    display: none; /* 初期状態では非表示 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* 半透明の黒い背景 */
+    display: flex; /* 中央寄せのためにflexboxを使用 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 他のコンテンツより手前に表示 */
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 90%; /* ポップアップの最大幅 */
+    max-height: 90%; /* ポップアップの最大高さ */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex; /* 画像中央寄せのため */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content img {
+    max-width: 100%; /* ポップアップ内の画像をコンテナに収める */
+    max-height: 80vh; /* ビューポートの高さの80%まで */
+    display: block; /* 余分なスペースをなくす */
+    border-radius: 4px;
+}
+
+#image-popup {
+    display: none; /* 初期状態では非表示 */
+}
+.popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    margin-left: 200px; /* ナビゲーションバーの幅を考慮 */
+}

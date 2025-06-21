@@ -1,1 +1,37 @@
-123 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>写真家を名乗れるか微妙な何か</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="gallery.html">Photo</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="equipment.html">Equipment</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>写真家を名乗れるか微妙な何か</h1>
+        <div class="gallery">
+            <img src="images/thumb_1.jpg" alt="風景1" data-full="images/full_1.jpg">
+            <img src="images/thumb_2.jpg" alt="風景2" data-full="images/full_2.jpg">
+            <img src="images/thumb_3.jpg" alt="風景3" data-full="images/full_3.jpg">
+            <img src="images/thumb_1.jpg" alt="風景1" data-full="images/full_1.jpg">
+            <img src="images/thumb_2.jpg" alt="風景2" data-full="images/full_2.jpg">
+            <img src="images/thumb_3.jpg" alt="風景3" data-full="images/full_3.jpg">
+        </div>
+    </div>
+
+    <div id="image-popup" class="popup-overlay">
+        <div class="popup-content">
+            <img id="popup-image" src="images/thumb_1.jpg" alt="拡大画像">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
