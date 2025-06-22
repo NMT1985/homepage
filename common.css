@@ -112,6 +112,65 @@ a {
     align-items: center;
 }
 
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 20px;
+}
+
+.logo img {
+    width: 150px; /* ロゴの幅を調整 */
+    height: auto; /* 高さは自動 */
+}
+
 .content {
     margin-left: 200px; /* ナビゲーションバーの幅を考慮 */
+    padding: 20px 0px;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+    .navbar ul {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+        padding: 10px;
+        display: inline-block;
+    }
+
+    .logo {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 50px; /* モバイル用のロゴサイズ */
+        height: auto;
+    }
+
+    .content {
+        margin-top: 60px; /* ナビゲーションバーの高さを考慮 */
+        margin-left: 0px; /* ナビゲーションバーの幅を考慮 */
+        padding: 20px 0px;
+    }
+}
+
+
+
+.introduction {
+    padding: 20px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
