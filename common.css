@@ -75,7 +75,7 @@ a {
     max-width: 90%; /* ポップアップの最大幅 */
     max-height: 90%; /* ポップアップの最大高さ */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    display: flex; /* 画像中央寄せのため */
+    display: block; /* 画像中央寄せのため */
     justify-content: center;
     align-items: center;
 }
@@ -110,6 +110,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-right: 1px solid #ccc;
 }
 
 .logo {
@@ -126,7 +127,6 @@ a {
 
 .content {
     margin-left: 200px; /* ナビゲーションバーの幅を考慮 */
-    padding: 20px 0px;
 }
 
 @media (max-width: 600px) {
@@ -134,10 +134,12 @@ a {
         width: 100%;
         height: auto;
         flex-direction: column;
+        border-bottom: 1px solid #ccc;
     }
     .navbar ul {
         display: flex;
         align-items: center;
+        height: 60px;
     }
 
     .navbar li {
@@ -147,19 +149,19 @@ a {
     }
 
     .logo {
-        padding: 10px;
+        padding: 0px;
         text-align: center;
     }
 
     .logo img {
-        width: 50px; /* モバイル用のロゴサイズ */
-        height: auto;
+        width: auto; /* モバイル用のロゴサイズ */
+        height: 50px;
+        margin: 5px;
     }
 
     .content {
         margin-top: 60px; /* ナビゲーションバーの高さを考慮 */
         margin-left: 0px; /* ナビゲーションバーの幅を考慮 */
-        padding: 20px 0px;
     }
 }
 
@@ -169,7 +171,7 @@ a {
     padding: 20px;
     background-color: #fff;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
