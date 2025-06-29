@@ -11,6 +11,15 @@ h1 {
     margin-bottom: 30px;
 }
 
+h3 {
+    color:#333;
+    margin: 10px;
+}
+
+p {
+    margin-block: 0px;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -82,7 +91,7 @@ a {
 
 .popup-content img {
     max-width: 100%; /* ポップアップ内の画像をコンテナに収める */
-    max-height: 80vh; /* ビューポートの高さの80%まで */
+    max-height: 75vh; /* ビューポートの高さの80%まで */
     display: block; /* 余分なスペースをなくす */
     border-radius: 4px;
 }

@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const galleryImages = document.querySelectorAll('.gallery img');
     const imagePopup = document.getElementById('image-popup');
     const popupImage = document.getElementById('popup-image');
+    const popupIntro = document.getElementById('popup-intro');
 
     // 各画像にクリックイベントリスナーを設定
     galleryImages.forEach(image => {
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (fullImageUrl) {
                 popupImage.src = fullImageUrl; // ポップアップの画像ソースを設定
                 imagePopup.style.display = 'flex'; // ポップアップを表示
+                popupIntro.textContent = event.target.alt || '画像の説明がありません'; // alt属性から説明を取得
             }
         });
     });
